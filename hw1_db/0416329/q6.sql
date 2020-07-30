@@ -1,0 +1,1 @@
+SELECT SUM(walkDistance+swimDistance+rideDistance) AS totalDIstance, walkDistance, swimDistance, rideDistance FROM player_statistic WHERE walkDistance>0 AND swimDistance>0 and rideDistance>0 GROUP BY 2,3,4 ORDER BY 1 DESC LIMIT 10;

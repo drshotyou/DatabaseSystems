@@ -1,0 +1,1 @@
+SELECT COUNT(Id) AS numberOfPlayers, MAX(heals) AS maxHeals FROM matches, player_statistics WHERE damageDealt=0 AND winPlacePerc=1 AND matchDuration > (SELECT AVG(matchDuration) FROM matches) ORDER BY MAX(heals);

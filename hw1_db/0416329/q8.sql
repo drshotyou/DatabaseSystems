@@ -1,0 +1,1 @@
+SELECT AVG(SUM(winPlacePerc)) AS avgWinPlacePerc, AVG(SUM(roadKills)) AS teamRoadKills FROM player_statistic HAVING ((SELECT matchType FROM matches WHERE matchType='squad') OR (SELECT matchType FROM matches WHERE matchType='squad-fpp')) GROUP BY groupId ORDER BY teamRoadKills DESC;
